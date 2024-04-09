@@ -8,7 +8,7 @@ createApp({
     },
     methods: {
         emailGenerator(){
-            for(let i=0; i < 10; i++){
+            while (this.emailArray.length < 10){
                 axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
                 .then((response) => {
                 this.emailArray.push(response.data.response)
